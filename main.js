@@ -1,6 +1,6 @@
 // mulai loader
-window.addEventListener("load", function () {
-  const loader = document.querySelector(".load-content");
+window.addEventListener("DOMContentLoaded", function () {
+  var loader = document.querySelector(".load-content");
   loader.style.display = "none";
 });
 
