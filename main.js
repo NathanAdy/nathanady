@@ -22,6 +22,9 @@ function sweetAlert() {
   Swal.fire('You Haven\'t Logged in')
 }
 
+function seeAll() {
+  Swal.fire('Login to see more of our products')
+}
 
 // gallery
 var openmodal = document.querySelectorAll(".modal-open");
