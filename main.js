@@ -17,6 +17,11 @@ darkToggle.addEventListener("click", function () {
   }
 });
 // akhir dark mode
+// sweet alert 
+function login() {
+  Swal.fire('You Haven\'t Logged in')
+}
+
 
 // gallery
 var openmodal = document.querySelectorAll(".modal-open");
