@@ -1,6 +1,6 @@
 // mulai loader
 window.addEventListener("DOMContentLoaded", function () {
-  var loader = document.querySelector(".load-content");
+  const loader = document.querySelector(".load-content");
   loader.style.display = "none";
 });
 
@@ -18,6 +18,7 @@ darkToggle.addEventListener("click", function () {
 });
 // akhir dark mode
 
+// gallery
 var openmodal = document.querySelectorAll(".modal-open");
 for (var i = 0; i < openmodal.length; i++) {
   openmodal[i].addEventListener("click", function (event) {
