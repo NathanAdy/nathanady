@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,6 +20,9 @@
                     zIndex: {
                         '100': '100',
                     },
+                    screens: {
+                        'xs': '412px',
+                    }
                 }
             }
         }
@@ -162,10 +163,10 @@
 
 <body>
     <!-- Loader -->
-    <div class="absolute top-0 bottom-0 right-0 w-full left-9 z-100 backdrop backdrop-blur-xl load-content">
-        <p class="absolute text-4xl font-bold text-center text-blue-500 top-1/3 left-1/2 font-ubuntu title-load">
+    <div class="absolute top-0 bottom-0 left-9 right-0 z-100 w-full backdrop backdrop-blur-xl load-content">
+        <p class="absolute font-bold text-4xl text-blue-500 top-1/3 left-1/2 text-center font-ubuntu title-load">
             BLUEJACK</p>
-        <div class="absolute top-0 bottom-0 left-0 right-0 flex p-5 m-auto h-fit w-fit loader">
+        <div class="absolute top-0 bottom-0 left-0 right-0 h-fit w-fit p-5 flex m-auto loader">
             <svg class="fill-none stroke-blue-500 logo-load" xmlns="http://www.w3.org/2000/svg" width="150" height="150"
                 fill="currentColor" viewBox="-1 -1 18 18">
                 <path
@@ -179,10 +180,10 @@
         <!-- navbar  -->
         <nav class="relative bg-transparent border-gray-50 font-ubuntu">
             <div
-                class="fixed top-0 left-0 right-0 z-50 flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto backdrop-blur-sm">
+                class="fixed top-0 left-0 right-0 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 z-50 backdrop-blur-sm">
                 <a href="#home" class="flex items-center">
-                    <img src="img/logo.png" class="w-20 h-20 mr-3" alt="BlueJack Logo" />
-                    <span class="self-center text-2xl font-semibold text-blue-500 whitespace-nowrap ">BLUEJACK</span>
+                    <img src="img/logo.png" class="h-20 w-20 mr-3" alt="BlueJack Logo" />
+                    <span class="self-center text-2xl text-blue-500 font-semibold whitespace-nowrap ">BLUEJACK</span>
                 </a>
                 <div class="flex items-center md:order-2">
                     <label class="switch" for="dark-toggle">
@@ -203,7 +204,7 @@
                         <span class="slider"></span>
                     </label>
                     <button data-collapse-toggle="mobile-menu-language-select" type="button"
-                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-200 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-50 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-200 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-50  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="mobile-menu-language-select" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="currentColor" aria-hidden="true" viewBox="0 0 20 20"
@@ -214,12 +215,12 @@
                         </svg>
                     </button>
                 </div>
-                <div class="items-center justify-between hidden w-full text-gray-700 md:flex md:w-auto md:order-1 dark:text-white"
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 text-gray-700 dark:text-white"
                     id="mobile-menu-language-select">
                     <ul
-                        class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-gray-700">
                         <li>
-                            <a href="#home" class="block py-2 pl-3 pr-4 rounded hover:text-blue-700 "
+                            <a href="#home" class="block py-2 pl-3 hover:text-blue-700 pr-4 rounded "
                                 aria-current="page">Home</a>
                         </li>
                         <li>
@@ -246,12 +247,12 @@
                         <h1 class="mt-6 text-4xl font-normal sm:mt-10 sm:text-5xl lg:text-6xl xl:text-8xl">
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">A
                                 Famous Game Store</span> Indonesia! </h1>
-                        <p class="max-w-lg mt-4 text-xl font-normal text-justify sm:mt-8"> Welcome to Bluejack Games
+                        <p class="max-w-lg mt-4 text-xl text-justify font-normal sm:mt-8"> Welcome to Bluejack Gamse
                             Store, A Famous game store in Indonesia! We sell various types of game consoles from all
                             manufactures. Discover an unforgettable gaming experience at Bluejack Game Store. </p>
-                        <div class="mt-6 mb-10 text-center md:mb-16 lg:mb-20">
+                        <div class="mb-10 mt-6 text-center md:mb-16 lg:mb-20">
                             <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
-                                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center hover:shadow-lg hover:shadow-indigo-500/50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                class="block text-white font-bold bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center hover:shadow-lg hover:shadow-indigo-500/50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 type="button"> SIGN IN</button>
                         </div>
                         <div class="flex flex-col items-center">
@@ -299,7 +300,7 @@
                     </div>
                 </div>
                 <div
-                    class="inset-y-0 top-0 right-0 w-full px-4 mx-auto mb-6 animate-pulse md:px-0 lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-4 lg:w-1/2 lg:max-w-full lg:absolute xl:px-4">
+                    class="animate-pulse inset-y-0 top-0 right-0 w-full px-4 mx-auto mb-6 md:px-0 lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-4 lg:w-1/2 lg:max-w-full lg:absolute xl:px-4">
                     <img class="object-contain w-full rounded shadow-lg lg:rounded-none lg:shadow-none md:h-30 lg:h-full"
                         src="album/hero.png" alt="" />
                 </div>
@@ -452,43 +453,44 @@
         <div
             class="bg-gradient-to-b from-blue-500 from-5% to-gray-50 dark:from-cyan-500 dark:from-5% dark:to-gray-800 pt-28 pb-6 text-slate-700 dark:text-gray-300">
             <!--  -->
-            <h1 class="text-4xl font-bold tracking-tight text-center sm:text-6xl dark:text-white" data-aos="fade-up"
+            <h1 class="text-4xl font-bold text-center tracking-tight sm:text-6xl dark:text-white" data-aos="fade-up"
                 data-aos-duration="500">Gallery </h1>
-            <div class="max-w-2xl px-4 py-16 mx-auto sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+            <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                 <h2 class="text-2xl font-bold tracking-tight" data-aos="fade-right" data-aos-duration="500"
                     data-aos-delay="300">Customers also purchased</h2>
-                <div
-                    class="grid grid-cols-1 mt-6 gap-x-6 gap-y-10 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
+                <div class="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
                     <!-- game 1 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
+                    <div class="group relative border-b-2 border-blue-500 border-b-2 border-blue-500"
+                        data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/1.jpg" alt="JEDI SURVIVOR"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="pt-4 px-2 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton1" data-modal-target="defaultModal1"
                                         data-modal-toggle="defaultModal1">
-                                        <span aria-hidden="true" class="absolute inset-0"></span> JEDI SURVIVOR
-                                    </button>
+                                        <span aria-hidden="true" class="absolute inset-0 sm:text-base"></span> JEDI
+                                        SURVIVOR </button>
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$35</p>
+                            <p class="text-sm font-medium font-bold">$35</p>
                         </div>
                     </div>
                     <!-- game 2 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="750" data-aos-delay="500">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="750"
+                        data-aos-delay="500">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/2.jpg" alt="THE LAST OF US"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full" />
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton2" data-modal-target="defaultModal2"
                                         data-modal-toggle="defaultModal2">
                                         <span aria-hidden="true" class="absolute inset-0"></span> THE LAST OF US P-1
@@ -496,38 +498,40 @@
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$65</p>
+                            <p class="text-sm font-medium font-bold">$65</p>
                         </div>
                     </div>
                     <!-- game 3 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="600">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="500"
+                        data-aos-delay="600">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/4.jpg" alt="ATLAS FALLEN"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton3" data-modal-target="defaultModal3"
                                         data-modal-toggle="defaultModal3">
                                         <span aria-hidden="true" class="absolute inset-0"></span> ATLAS FALLEN </button>
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$55</p>
+                            <p class="text-sm font-medium font-bold">$55</p>
                         </div>
                     </div>
                     <!-- game 4 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="750" data-aos-delay="700">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="750"
+                        data-aos-delay="700">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/5.jpg" alt="STREET FIGHTER"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton4" data-modal-target="defaultModal4"
                                         data-modal-toggle="defaultModal4">
                                         <span aria-hidden="true" class="absolute inset-0"></span> STREET FIGHTER
@@ -535,40 +539,40 @@
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$45</p>
+                            <p class="text-sm font-medium font-bold">$45</p>
                         </div>
                     </div>
                     <!-- game 5 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="300"
-                        data-aos-offset="300">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="500"
+                        data-aos-delay="300" data-aos-offset="300">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/6.jpg" alt="F1 2K23"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton5" data-modal-target="defaultModal5"
                                         data-modal-toggle="defaultModal5">
                                         <span aria-hidden="true" class="absolute inset-0"></span> F1 2K23 </button>
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$35</p>
+                            <p class="text-sm font-medium font-bold">$35</p>
                         </div>
                     </div>
                     <!-- game 6 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="750" data-aos-delay="500"
-                        data-aos-offset="300">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="750"
+                        data-aos-delay="500" data-aos-offset="300">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/7.jpg" alt="LIGHTFALL ANNUAL PASS"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton6" data-modal-target="defaultModal6"
                                         data-modal-toggle="defaultModal6">
                                         <span aria-hidden="true" class="absolute inset-0"></span> LIGHTFALL ANNUAL PASS
@@ -576,20 +580,20 @@
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$35</p>
+                            <p class="text-sm font-medium font-bold">$35</p>
                         </div>
                     </div>
                     <!-- game 7 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="600"
-                        data-aos-offset="300">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="500"
+                        data-aos-delay="600" data-aos-offset="300">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/8.webp" alt="Dead Island2"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton7" data-modal-target="defaultModal7"
                                         data-modal-toggle="defaultModal7">
                                         <span aria-hidden="true" class="absolute inset-0"></span> DEAD ISLAND 2
@@ -597,20 +601,20 @@
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$45</p>
+                            <p class="text-sm font-medium font-bold">$45</p>
                         </div>
                     </div>
                     <!-- game 8 -->
-                    <div class="relative group" data-aos="zoom-in-up" data-aos-duration="750" data-aos-delay="700"
-                        data-aos-offset="300">
+                    <div class="group relative border-b-2 border-blue-500" data-aos="zoom-in-up" data-aos-duration="750"
+                        data-aos-delay="700" data-aos-offset="300">
                         <div
-                            class="w-full overflow-hidden bg-gray-200 rounded-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="album/9.webp" alt="Lords Of The Vallen"
-                                class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+                                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm font-bold">
+                                <h3 class="text-xs font-bold md:text-sm">
                                     <button id="openButton8" data-modal-target="defaultModal8"
                                         data-modal-toggle="defaultModal8">
                                         <span aria-hidden="true" class="absolute inset-0"></span> LORDS OF THE VALLEN
@@ -618,7 +622,7 @@
                                 </h3>
                                 <p class="mt-1 text-sm font-bold">RPG</p>
                             </div>
-                            <p class="text-sm font-bold">$55</p>
+                            <p class="text-sm font-medium font-bold">$55</p>
                         </div>
                     </div>
                     <!-- review 1 -->
@@ -630,7 +634,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal1">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -643,14 +647,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container1"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video1"
                                             src="https://gaming-cdn.com/videos/products/9143/800x450/star-wars-jedi-survivor-pc-game-origin-preview.webm?v=1681311827"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12">JEDI SURVIVOR</h2>
@@ -663,31 +666,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -718,25 +721,32 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                      
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                      
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button type="button"
-                                                        class="flex justify-center block w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button type="button" class="block w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal1" onclick="sweetAlert()"><svg
-                                                            class="w-8 h-8 text-white" width="24" height="24"
+                                                            class="h-8 w-8 text-white" width="24" height="24"
                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                             fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                             <path stroke="none" d="M0 0h24v24H0z" />
@@ -749,7 +759,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal1"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -768,7 +778,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal2">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -781,14 +791,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container2"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video2"
                                             src="https://gaming-cdn.com/videos/products/13298/800x450/the-last-of-us-part-i-pc-game-steam-preview.webm?v=1670594941"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12">THE LAST OF US P-1</h2>
@@ -801,31 +810,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -856,25 +865,34 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700
+                                                                                                             
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700
+                                                                                                             
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button onclick="sweetAlert()" type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button onclick="sweetAlert()" type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
-                                                        data-modal-hide="defaultModal2"><svg class="w-8 h-8 text-white"
+                                                        data-modal-hide="defaultModal2"><svg class="h-8 w-8 text-white"
                                                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
                                                             stroke="currentColor" fill="none" stroke-linecap="round"
                                                             stroke-linejoin="round">
@@ -888,7 +906,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal2"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -908,7 +926,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal3">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -921,14 +939,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container3"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video3"
                                             src="https://gaming-cdn.com/videos/products/12706/800x450/atlas-fallen-pc-game-steam-preview.webm?v=1678892640"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12">ATLAS FALLEN</h2>
@@ -941,31 +958,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -996,25 +1013,34 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700
+                                                                                                             
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700
+                                                                                                             
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button onclick="sweetAlert()" type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button onclick="sweetAlert()" type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
-                                                        data-modal-hide="defaultModal3"><svg class="w-8 h-8 text-white"
+                                                        data-modal-hide="defaultModal3"><svg class="h-8 w-8 text-white"
                                                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
                                                             stroke="currentColor" fill="none" stroke-linecap="round"
                                                             stroke-linejoin="round">
@@ -1028,7 +1054,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal3"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -1048,7 +1074,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal4">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1061,14 +1087,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container4"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video4"
                                             src="https://www.instant-gaming.com/videos/products/6008/800x450/street-fighter-6-pc-game-steam-preview.webm?v=1663603480"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12">STREET FIGHTER</h2>
@@ -1081,31 +1106,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -1136,25 +1161,33 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                      
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                     
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        onclick="sweetAlert()" data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" onclick="sweetAlert()"
+                                                        data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
-                                                        data-modal-hide="defaultModal4"><svg class="w-8 h-8 text-white"
+                                                        data-modal-hide="defaultModal4"><svg class="h-8 w-8 text-white"
                                                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
                                                             stroke="currentColor" fill="none" stroke-linecap="round"
                                                             stroke-linejoin="round">
@@ -1168,7 +1201,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal4"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -1188,7 +1221,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal5">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1201,14 +1234,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container5"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video5"
                                             src="https://www.instant-gaming.com/videos/products/13660/800x450/f1-23-pc-game-ea-app-preview.webm?v=1683564212"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12"> F1 2K23</h2>
@@ -1221,31 +1253,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -1276,25 +1308,33 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                     
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                     
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        onclick="sweetAlert()" data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" onclick="sweetAlert()"
+                                                        data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
-                                                        data-modal-hide="defaultModal5"><svg class="w-8 h-8 text-white"
+                                                        data-modal-hide="defaultModal5"><svg class="h-8 w-8 text-white"
                                                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
                                                             stroke="currentColor" fill="none" stroke-linecap="round"
                                                             stroke-linejoin="round">
@@ -1308,7 +1348,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal5"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -1328,7 +1368,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal6">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1341,14 +1381,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container6"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video6"
                                             src="https://www.instant-gaming.com/videos/products/12728/800x450/destiny-2-lightfall-annual-pass-dlc-season-pc-game-steam-preview.webm?v=1677582114"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12"> LIGHTFALL ANNUAL PASS</h2>
@@ -1361,31 +1400,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -1416,26 +1455,33 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                    
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                       
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal6" onclick="sweetAlert()"><svg
-                                                            class="w-8 h-8 text-white" width="24" height="24"
+                                                            class="h-8 w-8 text-white" width="24" height="24"
                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                             fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                             <path stroke="none" d="M0 0h24v24H0z" />
@@ -1448,7 +1494,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal6"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -1468,7 +1514,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal7">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1482,14 +1528,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container7"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video7"
                                             src="https://gaming-cdn.com/videos/products/13401/800x450/dead-island-2-deluxe-edition-xbox-one-xbox-series-x-s-deluxe-edition-xbox-series-x-s-xbox-one-game-microsoft-store-preview.webm?v=1681805072"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12"> DEAD ISLAND 3 </h2>
@@ -1502,31 +1547,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5 text-gray-200 dark:text-gray-600"
+                                                        <svg class="text-gray-200 dark:text-gray-600 h-5 w-5 flex-shrink-0"
                                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -1557,26 +1602,33 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                         
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                       
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal7" onclick="sweetAlert()"><svg
-                                                            class="w-8 h-8 text-white" width="24" height="24"
+                                                            class="h-8 w-8 text-white" width="24" height="24"
                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                             fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                             <path stroke="none" d="M0 0h24v24H0z" />
@@ -1588,7 +1640,7 @@
                                                     <button type="button" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal7" onclick="sweetAlert()"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -1608,7 +1660,7 @@
                                 <!-- Modal header -->
                                 <div class="flex items-start justify-between p-1 border-b rounded-t">
                                     <button type="button"
-                                        class="inline-flex items-center p-1 ml-auto text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover dark:hover:bg-gray-600 dark:hover:text-white"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                         data-modal-hide="defaultModal8">
                                         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1622,14 +1674,13 @@
                                 </div>
                                 <!-- Modal body -->
                                 <div
-                                    class="grid items-start w-full grid-cols-1 p-6 gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
+                                    class="grid w-full p-6 grid-cols-1 items-start gap-x-12 gap-y-16 sm:grid-cols-12 lg:gap-x-16">
                                     <div id="video-container8"
-                                        class="overflow-hidden bg-gray-100 rounded-lg aspect-h-10 aspect-w-4 sm:col-span-4 lg:col-span-5">
+                                        class="aspect-h-10 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
                                         <video id="my-video8"
                                             src="https://gaming-cdn.com/videos/products/12715/800x450/lords-of-the-fallen-pc-game-steam-preview.webm?v=1684425904"
-                                            alt=""
-                                            class="object-cover object-center w-full aspect-video md:aspect-square"
-                                            muted>
+                                            alt="" class="w-full aspect-video md:aspect-square object-cover
+                                            object-center" muted>
                                     </div>
                                     <div class="sm:col-span-8 lg:col-span-7">
                                         <h2 class="text-2xl font-bold sm:pr-12"> LORDS OF THE VALLEN</h2>
@@ -1642,31 +1693,31 @@
                                                 <div class="flex items-center">
                                                     <div class="flex items-center">
                                                         <!-- Active: ", Default: "text-gray-200" -->
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        <svg class="flex-shrink-0 w-5 h-5" viewBox="0 0 20 20"
+                                                        <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20"
                                                             fill="currentColor" aria-hidden="true">
                                                             <path fill-rule="evenodd"
                                                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
@@ -1697,26 +1748,33 @@
                                                             class="grid grid-cols-5 gap-5 sm:grid-cols-10 lg:grid-cols-5">
                                                             <div class="inline-flex rounded-md shadow-sm" role="group">
                                                                 <button type="button"
-                                                                    class="inline-flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-500">
+                                                                    class="inline-flex mr-2 items-center px-6 py-4 text-sm font-medium border rounded-md  hover:text-white hover:bg-gray-600 focus:z-10 focus:ring-2 focus:ring-blue-700  dark:focus:ring-blue-500">
                                                                     PC </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 ">
-                                                                    Playstation </button>
-                                                                <button type="button"
-                                                                    class="flex items-center px-6 py-4 mr-2 text-sm font-medium border rounded-md hover:text-white focus:z-10 focus:ring-2 focus:ring-blue-700 hover:bg-gray-600 focus:ring-blue-500 focus:text-white">
-                                                                    Xbox </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                                                                                                             
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    "> Playstation </button>
+                                                                <button type="button" class="flex mr-2 items-center px-6 py-4
+                                                                    text-sm font-medium border
+                                                                    rounded-md hover:text-white focus:z-10 focus:ring-2
+                                                                    focus:ring-blue-700                            
+                                                                    hover:bg-gray-600 focus:ring-blue-500
+                                                                    focus:text-white"> Xbox </button>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                                 <!-- button cart & buy -->
-                                                <div class="flex mt-6 jitem-center">
-                                                    <button type="button"
-                                                        class="flex justify-center w-1/5 px-4 py-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        data-modal-target="authentication-modal"
+                                                <div class="flex jitem-center mt-6">
+                                                    <button type="button" class="w-1/5 flex justify-center rounded-md border border-transparent bg-indigo-600
+                                                        px-4 py-4 text-base font-medium text-white hover:bg-indigo-700
+                                                        focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                        focus:ring-offset-2" data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal8" onclick="sweetAlert()"><svg
-                                                            class="w-8 h-8 text-white" width="24" height="24"
+                                                            class="h-8 w-8 text-white" width="24" height="24"
                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                             fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                             <path stroke="none" d="M0 0h24v24H0z" />
@@ -1729,7 +1787,7 @@
                                                         data-modal-target="authentication-modal"
                                                         data-modal-toggle="authentication-modal"
                                                         data-modal-hide="defaultModal8"
-                                                        class="w-4/5 px-4 py-4 ml-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
+                                                        class="ml-3 w-4/5 rounded-md border border-transparent bg-indigo-600 px-4 py-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Buy
                                                         Now</button>
                                                 </div>
                                             </form>
@@ -1741,11 +1799,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-10 text-center">
-                    <button onclick="seeAll()" type="button" data-modal-target="authentication-modal"
-                        data-modal-toggle="authentication-modal"
-                        class="inline-flex items-center font-semibold text-indigo-400 transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">See
-                        all products <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
+                <div class="text-center mt-10"> <button onclick="seeAll()" type="button"
+                        data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="inline-flex items-center font-semibold transition-colors duration-200 text-indigo-400
+                         text-deep-purple-accent-400 hover:text-deep-purple-800">See all products <svg
+                            class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
                             <path
                                 d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
                             </path>
@@ -1758,13 +1815,13 @@
     <!-- about -->
     <div id="about" class="about text-slate-700 dark:text-slate-50 bg-slate-50 dark:bg-gray-800">
         <!-- -->
-        <div class="px-4 mx-auto pt-28 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-84 pb-28">
-            <h1 class="mb-8 text-4xl font-bold tracking-tight text-center font-ubuntu sm:text-6xl" data-aos="fade-up"
+        <div class="px-4 pt-28 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-84 pb-28">
+            <h1 class="mb-8 text-4xl font-bold font-ubuntu text-center tracking-tight sm:text-6xl" data-aos="fade-up"
                 data-aos-duration="500">About</h1>
             <div class="grid gap-12 row-gap-8 lg:grid-cols-2">
                 <div class="flex flex-col justify-center">
                     <div class="max-w-xl mb-6">
-                        <h2 class="max-w-lg mb-6 text-3xl font-bold leading-loose tracking-tight font-ubuntu sm:text-4xl sm:leading-none"
+                        <h2 class="max-w-lg mb-6 font-ubuntu text-3xl font-bold tracking-tight leading-loose sm:text-4xl sm:leading-none"
                             data-aos="fade-right" data-aos-duration="500"> Hi Dear, We are from Bluejack Game Shop!
                         </h2>
                         <p class="text-base text-justify font-ubuntu md:text-lg" data-aos="fade-right"
@@ -1782,7 +1839,7 @@
                                 accessories are also available. </p>
                         </div>
                         <div>
-                            <h6 class="pb-4 mb-2 font-semibold" data-aos="fade-right" data-aos-duration="500"
+                            <h6 class="mb-2 font-semibold pb-4" data-aos="fade-right" data-aos-duration="500"
                                 data-aos-delay="200"> Secure and reliable services </h6>
                             <p class="text-base text-justify" data-aos="fade-right" data-aos-duration="500"
                                 data-aos-delay="500"> Enjoy fast and secure service with friendly staff. Happy shopping
@@ -1804,7 +1861,7 @@
                         Core Team </p>
                 </div>
                 <h2
-                    class="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight font-ubuntu sm:text-4xl md:mx-auto">
+                    class="max-w-lg mb-6 font-ubuntu text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
                     <span class="relative team-title" data-aos="zoom-up" data-aos-duration="400"
                         data-aos-delay="200">Our talented team of professionals </span>
                 </h2>
@@ -1819,11 +1876,11 @@
                         <img class="object-cover w-full h-56 md:h-64 xl:h-80"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTigZm7GHPypXsrLnOtcC56TUsOyfngLKyMpg&usqp=CAU"
                             alt="Person" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500" />
-                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 font-bold text-center text-white transition-opacity duration-300 bg-opacity-25 bg-center bg-cover opacity-0 hover:opacity-100 hover:bg-opacity-20"
+                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 text-center font-bold text-white transition-opacity duration-300 bg-opacity-25 bg-cover bg-center opacity-0 hover:opacity-100 hover:bg-opacity-20"
                             style="background-image: url('https://images.unsplash.com/photo-1563240619-44ec0047592c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY0fHxwZXJzb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60');">
                             <p class="mb-1 text-lg ">Bang John</p>
                             <p class="mb-4 text-xs">Front End</p>
-                            <p class="mb-4 text-xs tracking-wide mix-blend-hard-light"> Lorem ipsum, dolor sit amet
+                            <p class="mb-4 text-xs mix-blend-hard-light tracking-wide"> Lorem ipsum, dolor sit amet
                                 consectetur adipisicing elit. Mollitia, tenetur! </p>
                             <div class="flex items-center justify-center space-x-3">
                                 <a href="#Social"
@@ -1853,7 +1910,7 @@
                         <img class="object-cover w-full h-56 md:h-64 xl:h-80"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTigZm7GHPypXsrLnOtcC56TUsOyfngLKyMpg&usqp=CAU"
                             alt="Person" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500" />
-                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 font-bold text-center text-white transition-opacity duration-300 bg-opacity-75 bg-center bg-cover opacity-0 hover:opacity-100"
+                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 text-center text-white font-bold transition-opacity duration-300 bg-opacity-75 bg-cover bg-center opacity-0 hover:opacity-100"
                             style="background-image: url('https://images.unsplash.com/photo-1579038773867-044c48829161?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBlcnNvbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60')">
                             <p class="mb-1 text-lg">Bang Gaul</p>
                             <p class="mb-4 text-xs">UI / UX</p>
@@ -1887,7 +1944,7 @@
                         <img class="object-cover w-full h-56 md:h-64 xl:h-80"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTigZm7GHPypXsrLnOtcC56TUsOyfngLKyMpg&usqp=CAU"
                             alt="Person" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500" />
-                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 font-bold text-center text-white transition-opacity duration-300 bg-opacity-75 bg-center bg-cover opacity-0 hover:opacity-100"
+                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 text-center text-white font-bold transition-opacity duration-300 bg-opacity-75 bg-cover bg-center opacity-0 hover:opacity-100"
                             style="background-image: url('https://images.unsplash.com/photo-1576110598658-096ae24cdb97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTExfHxwZXJzb24lMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60')">
                             <p class="mb-1 text-lg text-gray-100">Bang Back</p>
                             <p class="mb-4 text-xs text-gray-100">Back End</p>
@@ -1921,7 +1978,7 @@
                         <img class="object-cover w-full h-56 md:h-64 xl:h-80"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTigZm7GHPypXsrLnOtcC56TUsOyfngLKyMpg&usqp=CAU"
                             alt="Person" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500" />
-                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 font-bold text-center transition-opacity duration-300 bg-opacity-75 bg-center bg-cover opacity-0 hover:opacity-100"
+                        <div class="absolute inset-0 flex flex-col justify-end px-5 py-4 text-center transition-opacity duration-300 bg-opacity-75 bg-cover bg-center opacity-0 hover:opacity-100 font-bold"
                             style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60')">
                             <p class="mb-1 text-lg text-gray-100">Bang Kuat</p>
                             <p class="mb-4 text-xs text-gray-100">Back End</p>
@@ -1957,14 +2014,14 @@
         class="outlet bg-gradient-to-t from-blue-500 from-5% to-gray-50 border-b border-gray-100 dark:from-cyan-500 dark:from-5% dark:to-gray-800">
         <!--  -->
         <div
-            class="px-4 pb-16 mx-auto pt-28 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 text-slate-700 dark:text-slate-50">
+            class="px-4 pb-16 pt-28 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 text-slate-700 dark:text-slate-50">
             <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 font-ubuntu">
                 <div class="mb-6">
-                    <h1 class="text-4xl font-bold tracking-tight text-center sm:text-6xl" data-aos="fade-up"
+                    <h1 class="text-4xl font-bold text-center tracking-tight  sm:text-6xl" data-aos="fade-up"
                         data-aos-duration="500">Outlet</h1>
                 </div>
                 <h2
-                    class="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight font-ubuntu sm:text-4xl md:mx-auto">
+                    class="max-w-lg mb-6 font-ubuntu text-3xl font-bold leading-none tracking-tight  sm:text-4xl md:mx-auto">
                     <span class="relative inline-block">
                         <svg viewBox="0 0 52 24" fill="currentColor"
                             class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
@@ -1979,14 +2036,14 @@
                         <span class="relative tracking-wide" data-aos="zoom-in-up" data-aos-duration="1000"
                             data-aos-delay="250">Bluejack Game Shop</span>
                         <span data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400"> Outlet </span>
-                        <p class="mt-4 text-base tracking-wide md:text-lg" data-aos="fade-in" data-aos-duration="1000"
+                        <p class="text-base md:text-lg mt-4 tracking-wide" data-aos="fade-in" data-aos-duration="1000"
                             data-aos-delay="200"> Find the Right Place for Your Gaming Needs! </p>
             </div>
             <div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
                 <div class="flex flex-col justify-center font-ubuntu">
                     <div class="flex">
                         <div class="mr-4">
-                            <div class="flex items-center justify-center w-10 h-10 mb-3 bg-blue-500 rounded-full"
+                            <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-blue-500"
                                 data-aos="fade-right" data-aos-duration="500" data-aos-delay="300"
                                 data-aos-offset="100">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -2007,7 +2064,7 @@
                     </div>
                     <div class="flex">
                         <div class="mr-4">
-                            <div class="flex items-center justify-center w-10 h-10 mb-3 bg-blue-500 rounded-full"
+                            <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-blue-500"
                                 data-aos="fade-right" data-aos-duration="500" data-aos-delay="500"
                                 data-aos-offset="100">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -2028,7 +2085,7 @@
                     </div>
                     <div class="flex">
                         <div class="mr-4">
-                            <div class="flex items-center justify-center w-10 h-10 mb-3 bg-blue-500 rounded-full"
+                            <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-blue-500"
                                 data-aos="fade-right" data-aos-duration="500" data-aos-delay="300"
                                 data-aos-offset="100">
                                 <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor"
@@ -2041,7 +2098,7 @@
                         <div>
                             <h6 class="mb-2 text-lg font-bold leading-5" data-aos="fade-up" data-aos-duration="500"
                                 data-aos-delay="300" data-aos-offset="100">Tell them I hate them</h6>
-                            <blockquote class="text-base font-medium text-justify" data-aos="fade-up"
+                            <blockquote class="text-base text-justify font-medium" data-aos="fade-up"
                                 data-aos-duration="500" data-aos-delay="300" data-aos-offset="100"> " Want to explore
                                 the exciting world of gaming? Visit Bluejack Game Shop today and discover the latest
                                 collection of games that will blow you away! With friendly service and fast delivery, we
@@ -2065,11 +2122,6 @@
         </div>
     </div>
     <!-- akhir outlet -->
-    <!-- back to top btn -->
-    <button type="button" id="backToTopBtn"
-        class="fixed hidden w-10 h-10 text-white bg-blue-500 rounded-full border-2 bottom-4 right-4 hover:bg-blue-700 dark:bg-cyan-600">
-        <span class="material-symbols-outlined">arrow_upward</span>
-    </button>
     <!-- footer -->
     <div
         class="container-footer bg-gradient-to-t from-white from-20% to-blue-500 dark:from-black dark:from-20% dark:to-cyan-500">
@@ -2090,7 +2142,7 @@
                             architecto beatae vitae dicta sunt explicabo. </p>
                     </div>
                 </div>
-                <div class="mt-6 space-y-2 text-sm">
+                <div class="space-y-2 text-sm mt-6">
                     <p class="text-base font-bold tracking-wide">Contacts</p>
                     <div class="flex pt-8">
                         <!-- phone -->
@@ -2112,8 +2164,8 @@
                             <path
                                 d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                         </svg>
-                        <a href="#phone" aria-label="Our email" title="Our email"
-                            class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">bluejack@mail.co</a>
+                        <a href="#phone" aria-label="Our email" title="Our email" class="transition-colors duration-300
+                            text-deep-purple-accent-400 hover:text-deep-purple-800">bluejack@mail.co</a>
                     </div>
                     <!--  map -->
                     <div class="flex">
@@ -2131,7 +2183,7 @@
                 </div>
                 <div class="mt-6">
                     <span class="text-base font-bold tracking-wide">Social</span>
-                    <div class="flex items-center pt-8 mt-1 space-x-3">
+                    <div class="flex items-center mt-1 space-x-3 pt-8">
                         <a href="#Social" class="transition-colors duration-300 hover:text-deep-purple-accent-400">
                             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 17">
